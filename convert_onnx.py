@@ -3,7 +3,7 @@ import torch
 from transformers import AutoModel, AutoTokenizer
 from model import FlagModel
 
-model_name = "./models/models--TidalTail--FinQA-FlagEmbedding/snapshots/272edad9ab6cd0160d2baf3597f881c8d49f1de1"  # 替换为您需要的模型名称
+model_name = "./models/models--TidalTail--FinQA-FlagEmbedding/snapshots/272edad9ab6cd0160d2baf3597f881c8d49f1de1"
 model = FlagModel(model_name_or_path=model_name)
 tokenizer = AutoTokenizer.from_pretrained(model_name)
 # model.eval()确保Dropout和BatchNorm在导出时以推理模式运行

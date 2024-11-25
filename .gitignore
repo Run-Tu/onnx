@@ -1,5 +1,5 @@
-./models/*
-./onnx_model/*
+models/*
+onnx_model/*
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

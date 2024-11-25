@@ -7,6 +7,8 @@ model_name = "./models/models--TidalTail--FinQA-FlagEmbedding/snapshots/272edad9
 model = FlagModel(model_name_or_path=model_name)
 tokenizer = AutoTokenizer.from_pretrained(model_name)
 # model.eval()确保Dropout和BatchNorm在导出时以推理模式运行
+device = torch.device('cpu')
+model.to(device)
 model.eval()
 
 # 构造示例输入

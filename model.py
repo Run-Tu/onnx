@@ -11,7 +11,7 @@ class FlagModel(nn.Module):
             pooling_method: str = 'cls',
             normalize_embeddings: bool = True,
             query_instruction_for_retrieval: str = None,
-            use_fp16: bool=True
+            use_fp16: bool=True # False半精度推理还是蛮快的
     ) -> None:
         super().__init__()
         self.tokenizer = AutoTokenizer.from_pretrained(model_name_or_path)
